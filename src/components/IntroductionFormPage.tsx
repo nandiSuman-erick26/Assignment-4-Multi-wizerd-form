@@ -298,7 +298,7 @@ const IntroductionFormPage = () => {
                   fontSize: 14,
                 }}
               >
-                aditional details
+                additional details
               </Typography>
             </Box>
             <Box sx={{ width: "100%", border: "1px solid #5353532f" }}></Box>
