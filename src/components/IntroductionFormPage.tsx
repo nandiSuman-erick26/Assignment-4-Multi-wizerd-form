@@ -436,42 +436,41 @@ const IntroductionFormPage = () => {
             </Box>
           </Box>
         </Box>
-        {isValid && (
-          <Box
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "flex-end",
+            alignItems: "center",
+            width: "100%",
+            // mt: 2,
+            position: { xs: "relative", md: "relative" },
+            // bottom: { xs: 10, md: "30", lg:"none" },
+            // right: { xs: 0},
+            // top:{xs:"none",md:0, lg:0},
+            zIndex: 1000,
+            pointerEvents: "none",
+            "& > button": { pointerEvents: "auto" },
+          }}
+        >
+          <Button
+            type="submit"
             sx={{
-              display: "flex",
-              justifyContent: "flex-end",
-              alignItems: "center",
-              width: "100%",
-              // mt: 2,
-              position: { xs: "relative", md: "relative" },
-              // bottom: { xs: 10, md: "30", lg:"none" },
-              // right: { xs: 0},
-              // top:{xs:"none",md:0, lg:0},
-              zIndex: 1000,
-              pointerEvents: "none",
-              "& > button": { pointerEvents: "auto" },
-            }}
-          >
-            <Button
-              type="submit"
-              sx={{
-                bgcolor: { xs: "transparent", md: "transparent" }, // Solid button on transparent background
-                border: "none",
-                "&:hover": {
-                  bgcolor: { xs: "#f0f0f0", md: "transparent" },
-                  "& svg": {
-                    stroke: "#0026ffff",
-                    transform: "translateX(3px)",
-                    transition: "0.2s",
-                  },
+              bgcolor: { xs: "transparent", md: "transparent" }, // Solid button on transparent background
+              border: "none",
+              "&:hover": {
+                bgcolor: { xs: "#f0f0f0", md: "transparent" },
+                "& svg": {
+                  stroke: "#0026ffff",
+                  transform: "translateX(3px)",
+                  transition: "0.2s",
                 },
-              }}
-            >
-              <CircleArrowRight size={32} stroke="#000" />
-            </Button>
-          </Box>
-        )}
+              },
+            }}
+            // disabled={!isValid}
+          >
+            <CircleArrowRight size={32} stroke="#000" />
+          </Button>
+        </Box>
       </Box>
     </>
   );
