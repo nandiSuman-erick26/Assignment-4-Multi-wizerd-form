@@ -74,7 +74,7 @@ const IntroductionFormPage = () => {
     control,
     reset,
     handleSubmit,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm<PersonalIntroductionData>({
     resolver: yupResolver(introSchema),
     defaultValues: {

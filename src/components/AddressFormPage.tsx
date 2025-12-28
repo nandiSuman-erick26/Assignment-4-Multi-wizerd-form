@@ -42,7 +42,7 @@ const AddressFormPage = () => {
     register,
     reset,
     handleSubmit,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm<AddressData>({
     resolver: yupResolver(addressSchema),
     defaultValues: {
